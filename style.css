@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente más moderna */
+    background: linear-gradient(135deg, #93abdb, #66a7cf); /* Degradado azul */
+    color: #000000; /* Blanco puro para mayor contraste */
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    background-color: #ffffff; /* Blanco para mayor contraste */
+    border: 2px solid #1f3b73; /* Azul oscuro más notorio */
+    border-radius: 16px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #333333; /* Color de fondo más oscuro en hover */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+button.actualizar {
+    background-color: #28a745; /* Verde vibrante */
+    color: white;
+    border: 2px solid #1f3b73; /* Azul oscuro */
+}
+
+button.eliminar {
+    background-color: #e63946; /* Rojo vibrante */
+    color: white;
+    border: 2px solid #1f3b73; /* Azul oscuro */
+}
+
+/* Checkbox para completar la tarea */
+input[type="checkbox"] {
+    transform: scale(1.5);
+    cursor: pointer;
+    accent-color: #4CAF50; /* Verde llamativo */
+}
+
+/* Estilos para la tarjeta de la tarea */
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta:hover {
+    background-color: #f0f0f0; /* Cambio suave de color al hover */
+}
+
+/* Tareas completadas */
+p.tarea-completada {
+    text-decoration: line-through;
+    color: #adb5bd; /* Gris más claro */
+}
+
+#root {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #d4a6d1;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tarea {
+    margin-left: 50px;
+    color: #1f3b73; /* Azul oscuro */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#botones {
+    display: flex;
+    margin: 0 10px 0 10px;
+}
+
+#enviar {
+    margin-right: 30px;
+    background-color: #1f3b73; /* Azul oscuro */
+    color: white;
+    border: 2px solid #66a7cf;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+
+/* Media Queries para hacerlo responsive */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+    #root {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .tarjeta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #tarea {
+        margin-left: 0;
+        font-size: 1em;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #botones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
